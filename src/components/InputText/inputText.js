@@ -12,6 +12,7 @@ export default function InputText(props) {
         placeholderTextColor="#fff"
         value={props.value}
         onChangeText={props.onChangeText}
+        secureTextEntry={props.secureTextEntry}
       />
     </View>
   );

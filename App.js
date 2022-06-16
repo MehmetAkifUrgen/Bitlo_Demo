@@ -1,55 +1,65 @@
-import React, {useState} from 'react';
-import {
-  StyleSheet,
-  Text,
-  Image,
-  StatusBar,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-} from 'react-native';
-import InputText from './src/components/InputText';
-import LoginButton from './src/components/LoginButton';
+import React from 'react';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import LoginPage from './src/pages/Login';
+import Register from './src/pages/Register';
+import Main from './src/pages/Main';
+import Detail from './src/pages/Detail';
 
 export default function App() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const Stack = createNativeStackNavigator();
 
   return (
-    <KeyboardAvoidingView
-      enabled="false"
-      behavior="height"
-      style={styles.container}>
-      <Image style={styles.image} source={require('./assets/unnamed.png')} />
-
-      <StatusBar style="auto" />
-      <InputText placeholder="Email" />
-
-      <InputText placeholder="Password" />
-
-      <TouchableOpacity>
-        <Text style={styles.forgot_button}>Forgot Password?</Text>
-      </TouchableOpacity>
-      <LoginButton />
-    </KeyboardAvoidingView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          options={{
+            headerTitleAlign: 'center',
+            title: 'Login',
+            headerTintColor: 'white',
+            headerStyle: {
+              backgroundColor: '#0B2465',
+            },
+          }}
+          name="Login"
+          component={LoginPage}
+        />
+        <Stack.Screen
+          options={{
+            headerTitleAlign: 'center',
+            title: 'Register',
+            headerTintColor: 'white',
+            headerStyle: {
+              backgroundColor: '#0B2465',
+            },
+          }}
+          name="Register"
+          component={Register}
+        />
+        <Stack.Screen
+          options={{
+            headerTitleAlign: 'center',
+            title: 'Market',
+            headerTintColor: 'white',
+            headerStyle: {
+              backgroundColor: '#0B2465',
+            },
+          }}
+          name="Main"
+          component={Main}
+        />
+        <Stack.Screen
+          options={{
+            headerTitleAlign: 'center',
+            headerTintColor: 'white',
+            headerStyle: {
+              backgroundColor: '#0B2465',
+            },
+          }}
+          name="Detail"
+          component={Detail}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  image: {
-    marginBottom: 40,
-    width: 50,
-    height: 50,
-  },
-
-  forgot_button: {
-    height: 30,
-    marginBottom: 30,
-  },
-});
