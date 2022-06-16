@@ -3,6 +3,8 @@ import React, {useEffect, useState,useLayoutEffect} from 'react';
 import axios from 'axios';
 import Item from '../../components/Item';
 import styles from './main.style';
+import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
 
 export default function Main({navigation}) {
   const [data, setData] = useState([]);
@@ -13,6 +15,9 @@ export default function Main({navigation}) {
 
   function onRefresh() {
     setRefresh(true), getData();
+  }
+  async function getUser(){
+    console.log(await firestore().collection('users').doc(await auth().currentUser.uid).get())
   }
   
 
@@ -44,6 +49,7 @@ export default function Main({navigation}) {
 
   useEffect(() => {
     getData();
+    getUser();
   }, []);
 
   return (

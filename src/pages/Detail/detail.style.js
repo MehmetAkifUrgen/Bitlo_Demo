@@ -5,4 +5,9 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#112C71',
   },
+  separator:{
+    backgroundColor:'grey',
+    height:0.5,
+    marginHorizontal:'2%'
+}
 });
