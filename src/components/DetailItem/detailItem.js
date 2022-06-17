@@ -1,8 +1,8 @@
-import {View, Text} from 'react-native';
+import { View, Text } from 'react-native';
 import React from 'react';
 import styles from './detailItem.style';
 
-export default function DetailItem({item}) {
+export default function DetailItem({ item }) {
   let amount = item[1];
   let value = item[0];
   let toplam = amount * value;
@@ -12,9 +12,12 @@ export default function DetailItem({item}) {
   }
   return (
     <View style={styles.container}>
-      <Text style={[styles.valueText,{textAlign:'left'}]}>{formatToCurrency(toplam)}</Text>
-      <Text style={styles.valueText}>{value}</Text>
-      <Text style={styles.amountText}>{amount}</Text>
+      <Text style={[styles.amountText, {
+        textAlign: 'left'
+      }]}>{formatToCurrency(toplam)}</Text>
+      <Text style={[styles.valueText, { textAlign: 'left' }]}>{amount}</Text>
+      <Text style={[styles.valueText, { textAlign: 'right' }]}>{value}</Text>
+
     </View>
   );
 }

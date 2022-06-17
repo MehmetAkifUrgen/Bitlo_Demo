@@ -12,9 +12,10 @@ export default function AskItem({item}) {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.amountText}>{amount}</Text>
-      <Text style={[styles.valueText]}>{formatToCurrency(toplam)}</Text>
-      <Text style={[styles.valueText,{textAlign:'right'}]}>{value}</Text>
+      <Text style={styles.amountText}>{value}</Text>
+      <Text style={[styles.valueText,{textAlign:'left'}]}>{amount}</Text>
+      <Text style={[styles.valueText,{textAlign:'right'}]}>{formatToCurrency(toplam)}</Text>
+      
       
     </View>
   );

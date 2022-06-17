@@ -7,6 +7,8 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     padding:10,
     marginHorizontal: '2%',
+    borderBottomWidth:1,
+    borderBottomColor:'grey'
   },
   valueText: {
     fontSize: 15,
