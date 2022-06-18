@@ -21,5 +21,13 @@ export default StyleSheet.create({
         justifyContent:'center',
         alignItems:'center'
         
+    },
+    error:{
+        color:colors.red,
+        marginBottom:5
+    },
+    right:{
+        color:colors.white,
+        fontWeight:'bold'
     }
 })

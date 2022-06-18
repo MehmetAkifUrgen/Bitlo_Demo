@@ -19,5 +19,9 @@ export default StyleSheet.create({
         flex:4,
         alignItems: 'center',
         justifyContent:'center'
+    },
+    error:{
+        color:colors.red,
+        marginBottom:5
     }
 })

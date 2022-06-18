@@ -5,6 +5,7 @@ import LoginPage from './src/pages/Login';
 import Register from './src/pages/Register';
 import Main from './src/pages/Main';
 import Detail from './src/pages/Detail';
+import Account from './src/pages/Account';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -58,6 +59,17 @@ export default function App() {
           }}
           name="Detail"
           component={Detail}
+        />
+        <Stack.Screen
+          options={{
+            headerTitleAlign: 'center',
+            headerTintColor: 'white',
+            headerStyle: {
+              backgroundColor: '#0B2465',
+            },
+          }}
+          name="Account"
+          component={Account}
         />
       </Stack.Navigator>
     </NavigationContainer>

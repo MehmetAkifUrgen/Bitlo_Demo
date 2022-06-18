@@ -1,25 +1,37 @@
-import {View, Text, FlatList} from 'react-native';
-import React, {useEffect, useState,useLayoutEffect} from 'react';
+import { View, Text, FlatList } from 'react-native';
+import React, { useEffect, useState, useLayoutEffect } from 'react';
 import axios from 'axios';
 import Item from '../../components/Item';
 import styles from './main.style';
-import auth from '@react-native-firebase/auth';
-import firestore from '@react-native-firebase/firestore';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import colors from '../../colors';
 
-export default function Main({navigation}) {
+export default function Main({ navigation }) {
   const [data, setData] = useState([]);
   const [refresh, setRefresh] = useState(false);
   function ItemSeparatorComponent() {
     return <View style={styles.separator}></View>;
   }
+  function goAccount() {
+    navigation.navigate('Account');
+  }
 
   function onRefresh() {
     setRefresh(true), getData();
   }
-  async function getUser(){
-    console.log(await firestore().collection('users').doc(await auth().currentUser.uid).get())
-  }
   
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => {
+        return (
+          <Icon onPress={goAccount}  name='account' size={30}
+            color={colors.white} />
+        );
+      },
+    });
+  }, [navigation]);
+
 
   async function getData() {
     try {
@@ -37,19 +49,18 @@ export default function Main({navigation}) {
     }
   }
 
-  function onPress(item){
+  function onPress(item) {
     navigation.navigate('Detail', {
-      name:item.marketCode
+      name: item.marketCode
     });
   }
 
-  function renderItem({item}) {
-    return <Item onPress={()=> onPress(item)} item={item} />;
+  function renderItem({ item }) {
+    return <Item onPress={() => onPress(item)} item={item} />;
   }
 
   useEffect(() => {
     getData();
-    getUser();
   }, []);
 
   return (
