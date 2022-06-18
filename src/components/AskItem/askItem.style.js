@@ -1,14 +1,15 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../colors';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding:10,
     marginHorizontal: '2%',
     borderBottomWidth:1,
-    borderBottomColor:'grey'
+    borderBottomColor:colors.grey
   },
   valueText: {
     fontSize: 15,
@@ -20,7 +21,7 @@ export default StyleSheet.create({
     fontSize: 15,
     flex:1,
     fontWeight: 'bold',
-    color: '#FF5761',
+    color: colors.red,
     textAlign: 'left',
   },
 });

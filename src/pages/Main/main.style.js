@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../colors';
 
 export default StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:'#112C71'
+        backgroundColor:colors.main
     },
     image:{
         width:50,
@@ -21,7 +22,7 @@ export default StyleSheet.create({
         
     },
     separator:{
-        backgroundColor:'grey',
+        backgroundColor:colors.grey,
         height:1,
         marginHorizontal:'2%'
     }

@@ -52,9 +52,10 @@ export default function Login({navigation}) {
           value={password}
           placeholder="Password"
         />
-        <LoginButton onPress={signIn} value="Sign In" />
+        
         <LoginButton onPress={goRegister} value="Sign Up" />
       </View>
+      <LoginButton onPress={signIn} value="Sign In" />
     </KeyboardAvoidingView>
   );
 }

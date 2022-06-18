@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
+import colors from '../../colors';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 10,
@@ -12,7 +13,7 @@ export default StyleSheet.create({
   },
   valueText: {
     fontSize: 15,
-    color: 'black',
+    color: colors.black,
     flex: 1,
     textAlign: 'center',
     fontWeight: 'bold',
@@ -22,6 +23,6 @@ export default StyleSheet.create({
     flex: 1,
     fontWeight: 'bold',
     textAlign: 'right',
-    color:'black'
+    color:colors.black
   },
 });

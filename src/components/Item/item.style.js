@@ -1,9 +1,10 @@
 import {StyleSheet,Dimensions} from 'react-native';
+import colors from '../../colors';
 
 export default StyleSheet.create({
     container:{
         flex:4,
-        backgroundColor:'#112C71',
+        backgroundColor:colors.main,
         justifyContent:'space-between',
         alignItems:'center',
         flexDirection:'row',
@@ -12,7 +13,7 @@ export default StyleSheet.create({
     },
     text:{
         fontSize:16,
-        color:'white',
+        color:colors.white,
         fontWeight:'bold'
     },
     value:{
@@ -32,7 +33,7 @@ export default StyleSheet.create({
         width:Dimensions.get('window').width /6
     },
     percentText:{
-        color:'white',
+        color:colors.white,
         fontWeight:'bold'
     }
     

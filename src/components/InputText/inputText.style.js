@@ -1,8 +1,9 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../colors';
 
 export default StyleSheet.create({
     inputView: {
-        backgroundColor: '#251298',
+        backgroundColor: colors.white,
         borderRadius: 30,
         width: '70%',
         height: 45,
@@ -14,6 +15,6 @@ export default StyleSheet.create({
         height: 50,
         flex: 1,
         padding: 10,
-        color:'white'
+        color:colors.black
       },
 })

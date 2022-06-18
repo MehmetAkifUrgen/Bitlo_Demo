@@ -56,14 +56,14 @@ export default function Detail({ route, navigation }) {
         <>
           <ScrollView>
             {data.bids.map((item) => (
-              <DetailItem item={item} />))}
+              <DetailItem key={item[0]} item={item} />))}
           </ScrollView>
         </>
         <DetailHeader right="Toplam(TRY)" left="Fiyat" name={name} />
         <>
           <ScrollView contentContainerStyle={{ marginBottom: 25 }} >
             {data.asks.map((item) => (
-              <AskItem item={item} />))}
+              <AskItem key={item[0]} item={item} />))}
           </ScrollView>
         </>
       </ScrollView>
