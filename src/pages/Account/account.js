@@ -10,6 +10,8 @@ export default function Account({ navigation }) {
     let [data, setData] = useState([])
     let [loading, setLoading] = useState(true)
 
+
+
     useEffect(() => {
         getUser();
     }, [])
@@ -37,19 +39,19 @@ export default function Account({ navigation }) {
                 </View>
                 <View style={styles.body}>
                     <View style={styles.bodyItem}>
-                        <Text style={styles.field} >Name</Text>
+                        <Text style={styles.field} >Ad:</Text>
                         <Text style={styles.fieldText} >{data._data.name}</Text>
                     </View>
                     <View style={styles.bodyItem}>
-                        <Text style={styles.field} >Surname</Text>
+                        <Text style={styles.field} >Soyad:</Text>
                         <Text style={styles.fieldText} >{data._data.surname}</Text>
                     </View>
                     <View style={styles.bodyItem}>
-                        <Text style={styles.field} >Email</Text>
+                        <Text style={styles.field} >Email:</Text>
                         <Text style={styles.fieldText} >{data._data.email}</Text>
                     </View>
                 </View>
-                <Button onPress={logOut} value="Log Out" color={colors.red} />
+                <Button onPress={logOut} value="Çıkış Yap" color={colors.red} />
             </View>
         )
     }

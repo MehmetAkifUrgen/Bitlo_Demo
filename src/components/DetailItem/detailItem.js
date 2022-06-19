@@ -15,7 +15,7 @@ export default function DetailItem({ item }) {
       <Text style={[styles.amountText, {
         textAlign: 'left'
       }]}>{formatToCurrency(toplam)}</Text>
-      <Text style={[styles.valueText, { textAlign: 'left' }]}>{amount}</Text>
+      <Text style={[styles.valueText, { textAlign: 'center' }]}>{amount}</Text>
       <Text style={[styles.valueText, { textAlign: 'right' }]}>{value}</Text>
 
     </View>

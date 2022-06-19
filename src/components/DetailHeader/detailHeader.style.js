@@ -8,8 +8,8 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     padding: 10,
     marginHorizontal: '2%',
-    marginTop:25,
-    marginBottom:5
+    marginTop: 25,
+    marginBottom: 5
   },
   valueText: {
     fontSize: 15,
@@ -23,6 +23,6 @@ export default StyleSheet.create({
     flex: 1,
     fontWeight: 'bold',
     textAlign: 'right',
-    color:colors.black
+    color: colors.black
   },
 });

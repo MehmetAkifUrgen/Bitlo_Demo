@@ -13,15 +13,15 @@ export default StyleSheet.create({
     header: {
         justifyContent: 'center',
         alignItems: 'center',
-        flex:1
+        flex: 1
     },
     body: {
-        flex:4,
+        flex: 4,
         alignItems: 'center',
-        justifyContent:'center'
+        justifyContent: 'center'
     },
-    error:{
-        color:colors.red,
-        marginBottom:5
+    error: {
+        color: colors.red,
+        marginBottom: 5
     }
 })

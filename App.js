@@ -1,6 +1,6 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {NavigationContainer} from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
 import LoginPage from './src/pages/Login';
 import Register from './src/pages/Register';
 import Main from './src/pages/Main';
@@ -16,7 +16,7 @@ export default function App() {
         <Stack.Screen
           options={{
             headerTitleAlign: 'center',
-            title: 'Login',
+            title: 'Bitlo',
             headerTintColor: 'white',
             headerStyle: {
               backgroundColor: '#0B2465',
@@ -28,7 +28,7 @@ export default function App() {
         <Stack.Screen
           options={{
             headerTitleAlign: 'center',
-            title: 'Register',
+            title: 'Kayıt Ol',
             headerTintColor: 'white',
             headerStyle: {
               backgroundColor: '#0B2465',
@@ -38,6 +38,7 @@ export default function App() {
           component={Register}
         />
         <Stack.Screen
+
           options={{
             headerTitleAlign: 'center',
             title: 'Market',
@@ -45,6 +46,7 @@ export default function App() {
             headerStyle: {
               backgroundColor: '#0B2465',
             },
+
           }}
           name="Main"
           component={Main}
@@ -62,6 +64,7 @@ export default function App() {
         />
         <Stack.Screen
           options={{
+            title: 'Profil',
             headerTitleAlign: 'center',
             headerTintColor: 'white',
             headerStyle: {

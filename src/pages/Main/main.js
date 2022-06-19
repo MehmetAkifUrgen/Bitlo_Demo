@@ -19,13 +19,13 @@ export default function Main({ navigation }) {
   function onRefresh() {
     setRefresh(true), getData();
   }
-  
+
 
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => {
         return (
-          <Icon onPress={goAccount}  name='account' size={30}
+          <Icon onPress={goAccount} name='account' size={30}
             color={colors.white} />
         );
       },

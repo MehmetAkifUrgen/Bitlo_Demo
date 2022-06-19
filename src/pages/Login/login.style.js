@@ -1,33 +1,33 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import colors from '../../colors';
 
 export default StyleSheet.create({
-    container:{
-        flex:1,
-        
-        backgroundColor:colors.main
+    container: {
+        flex: 1,
+
+        backgroundColor: colors.main
     },
-    image:{
-        width:50,
-        height:50
+    image: {
+        width: 50,
+        height: 50
     },
-    header:{
-        justifyContent:'center',
-        alignItems:'center',
-        flex:1
+    header: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1
     },
-    body:{
-        flex:3,
-        justifyContent:'center',
-        alignItems:'center'
-        
+    body: {
+        flex: 3,
+        justifyContent: 'center',
+        alignItems: 'center'
+
     },
-    error:{
-        color:colors.red,
-        marginBottom:5
+    error: {
+        color: colors.red,
+        marginBottom: 5
     },
-    right:{
-        color:colors.white,
-        fontWeight:'bold'
+    right: {
+        color: colors.white,
+        fontWeight: 'bold'
     }
 })

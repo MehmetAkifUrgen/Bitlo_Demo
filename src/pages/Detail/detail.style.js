@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import colors from '../../colors';
 
 export default StyleSheet.create({
@@ -6,9 +6,9 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: colors.main,
   },
-  separator:{
-    backgroundColor:colors.grey,
-    height:0.5,
-    marginHorizontal:'2%'
-}
+  separator: {
+    backgroundColor: colors.grey,
+    height: 0.5,
+    marginHorizontal: '2%'
+  }
 });
